@@ -61,7 +61,7 @@ class Solution:
                 
         return False
 """        
-# Linear solution        
+# TWO POINTERS
 # TC : O(n)    
 # SC : O(1) since we're not using any space to store anything        
 # because the nums is sorted
@@ -73,23 +73,27 @@ class Solution:
 # otherwise move j down
 
 
+
 class Solution:
     def twoSum(self, nums: 'List[int]', target: 'int') -> 'List[int]':
         i = 0
         j = len(nums) -1
-        
-        while i<=j:
-            if nums[i]+ nums[j] == target:
-                print(nums[i]+ nums[j])
-                return True
-            elif nums[i]+ nums[j] < target:
+        nums = sorted(zip(nums, range(len(nums))))
+        while i<j:
+            s = nums[i][0]+nums[j][0]
+            if s == target:
+                return [nums[i][1],nums[j][1]]
+            elif s < target:
                 i+=1
             else:
                 j-=1
-        return False    
                 
         
-        
+"""
+Details 
+Runtime: 40 ms, faster than 75.69% of Python3 online submissions for Two Sum.
+Memory Usage: 13.9 MB, less than 100.00% of Python3 online submissions for Two Sum.
+"""
         
         
         
