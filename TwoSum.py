@@ -14,58 +14,12 @@ return [0, 1].
 """
 
 
-#Bruet Force Solution
-#Time complexity: O(n^2)
-#Space complexity: O(1)
-"""
-class Solution:
-    def twoSum(self, nums: 'List[int]', target: 'int') -> 'List[int]':
-        for i in range(len(nums)-1):
-            for j in range(i+1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    print (nums[i], nums[j])
-                return True
-        return False
-        
-"""
 
-
-#Hashtable
-#TC: O(n)
-#SC: O(n)
-#add each element in array to a hashtable
-#weather the target - the element is present in the hashtable
-# for example:
-# nums = [2,4,6]
-# target = 10
-# 
-# i=0
-# ht = dict()
-# ht[10 - 2] = ht[8] = 2
-
-# i = 1
-# ht[10 - 4] = ht [6] = 4
-
-#i = 2
-# ht[6] already exist. return the value 4 => sum the target value
-"""
-class Solution:
-    def twoSum(self, nums: 'List[int]', target: 'int') -> 'List[int]':
-        ht = dict()
-        for i in range(len(nums)):
-            if nums[i] in ht:
-                print(ht[nums[i]], nums[i])
-                return True
-            else:
-                ht[target - nums[i]] = nums[i]
-                
-        return False
-"""        
 # TWO POINTERS
 # TC : O(n)    
 # SC : O(1) since we're not using any space to store anything        
 # because the nums is sorted
-# i starts at the behining of nums
+# i starts at the begining of nums
 # j starts at the end of nums
 # add i and j
 # if sum of i and j is smaller than target
