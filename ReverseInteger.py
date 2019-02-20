@@ -42,4 +42,8 @@ Details
 Runtime: 48 ms, faster than 100.00% of Python3 online submissions for Reverse Integer.
 Memory Usage: 12.7 MB, less than 19.52% of Python3 online submissions for Reverse Integer.
 
+
+Runtime: 52 ms, faster than 85.92% of Python3 online submissions for Reverse Integer.
+Memory Usage: 12.6 MB, less than 55.33% of Python3 online submissions for Reverse Integer.
+
 """
