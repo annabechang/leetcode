@@ -65,4 +65,9 @@ class Solution:
 
         return (get_height(root) >= 0)
 """
+Success
+Details 
+Runtime: 56 ms, faster than 99.72% of Python3 online submissions for Balanced Binary Tree.
+Memory Usage: 18.9 MB, less than 5.41% of Python3 online submissions for Balanced Binary Tree.
+
 """
