@@ -114,3 +114,29 @@ Runtime: 44 ms, faster than 78.99% of Python3 online submissions for Best Time t
 Memory Usage: 14 MB, less than 44.59% of Python3 online submissions for Best Time to Buy and Sell Stock.
 
 """
+
+
+# option 2
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        min = prices[0]
+        # max = prices[0]
+        pro = 0
+        
+
+        for i in range(len(prices)):
+            # print(i,prices[i])
+            if prices[i]<min:
+                # print("if1")
+                min = prices[i]
+                
+                # for j in range(0,i):
+                    
+                #     if prices[j]<min:
+                #         min = prices[j]
+            elif prices[i] - min > pro:
+                pro = prices[i] - min 
+            
+        
+        
+        return pro
