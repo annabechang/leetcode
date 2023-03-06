@@ -52,3 +52,20 @@ Runtime: 36 ms, faster than 76.06% of Python3 online submissions for Climbing St
 Memory Usage: 13.2 MB, less than 5.18% of Python3 online submissions for Climbing Stairs.
 
 """
+
+"""
+class Solution:
+    def climbStairs(self, n: int) -> int:
+
+        one, two = 1,1
+
+        for i in range(n-1):
+            tmp = one
+            one = one+two
+            two = tmp
+            
+        return one
+
+"""
+
+
