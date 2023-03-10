@@ -68,3 +68,22 @@ Details
 Runtime: 112 ms, faster than 44.71% of Python online submissions for Contains Duplicate.
 Memory Usage: 15.7 MB, less than 93.76% of Python online submissions for Contains Duplicate.
 """
+# SOL
+        # nums.sort()
+        # for i in range(len(nums)-1):
+        #     if nums[i] == nums[i+1]:
+        #         return True
+        # return False
+# SOL
+        # map = {}
+        # for num in nums:
+        #     if num in map:
+        #         return True
+        #     map[num] = True
+        # # print(map)
+        # return False
+# SOL
+#         uni = set(nums)
+#         if len(nums) == len(uni):
+#             return  False
+#         return True
