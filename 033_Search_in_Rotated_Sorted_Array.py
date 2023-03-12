@@ -101,3 +101,31 @@ Details
 Runtime: 28 ms, faster than 99.35% of Python3 online submissions for Search in Rotated Sorted Array.
 Memory Usage: 12.7 MB, less than 100.00% of Python3 online submissions for Search in Rotated Sorted Array.
 """
+
+"""
+list all the possible situations when do we need to move the left pointer etc 
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l = 0
+        r = len(nums)-1
+        while l<=r:
+            m = (l+r)//2
+            # print(l,m,r)
+            print(nums[l],nums[m],nums[r])
+
+            if nums[m] == target:
+                return m
+            
+
+            elif target>nums[m]>=nums[l] or nums[m]>=nums[l]>target or nums[l]>target>nums[m]:
+                # the = here is to capture the edge case when there's only 2 element in the nums. 
+                l = m+1
+                # print(nums[l],nums[m],nums[r])
+            else:
+                r = m-1
+            print(l,m,r)
+            
+        return -1
+
+"""
+
