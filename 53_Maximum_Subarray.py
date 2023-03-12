@@ -40,3 +40,18 @@ Details
 Runtime: 44 ms, faster than 93.75% of Python3 online submissions for Maximum Subarray.
 Memory Usage: 13.6 MB, less than 5.50% of Python3 online submissions for Maximum Subarray.
 """
+"""
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+
+        max_so_far = nums[0]
+        max_tmp = 0
+        for i in range(len(nums)):
+
+            max_tmp += nums[i]
+            if max_tmp >= max_so_far:
+                max_so_far = max_tmp
+            if max_tmp < 0:
+                max_tmp = 0
+        return max_so_far
+        """
