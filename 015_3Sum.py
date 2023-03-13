@@ -62,3 +62,42 @@ Runtime: 736 ms, faster than 84.99% of Python3 online submissions for 3Sum.
 Memory Usage: 17 MB, less than 27.86% of Python3 online submissions for 3Sum.
 
 """
+
+
+"""
+two pointer method 
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        nums.sort()
+        for i in range(len(nums)):
+            
+            if i>0 and nums[i-1] == nums[i]:
+                continue
+            
+            l = i+1
+            r = len(nums)-1
+            # print(nums[i],nums[l],nums[r])
+            while l<r:
+                s = nums[i]+nums[l]+nums[r]
+                # print(nums[i],nums[l],nums[r])
+                if  s>0:
+                    r-=1
+                    # print("el2",nums[i],nums[l],nums[r])
+                elif s < 0:
+                    l+=1
+                    # print("el1",nums[i],nums[l],nums[r])
+                   
+                
+                else:
+                    # s == 0:
+                    res.append([nums[i],nums[l],nums[r]])
+                    l+=1
+                    #this while loop is to skip duplicates
+                    while nums[l-1] == nums[l] and l<r:
+                        l+=1
+                    # print("el0",nums[i],nums[l],nums[r])
+                    
+                
+        return res
+        """
