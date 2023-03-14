@@ -65,5 +65,24 @@ Details
 Runtime: 140 ms, faster than 78.14% of Python3 online submissions for Container With Most Water.
 Memory Usage: 15.5 MB, less than 5.26% of Python3 online submissions for Container With Most Water.
 """
+"""
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        
+        r = len(height)-1
+        res = 0
+        l = 0
+        
+        while l<r:    
+            # print(l,r,len(height))
+            tmp_res = min(height[l],height[r])*(r-l)
+            res = max(res,tmp_res)
 
+            if  height[l]> height[r]:
+                r-=1
+            else:
+                l+=1
+        return res
+use two pointers and update the max area
+"""
 
