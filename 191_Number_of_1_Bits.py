@@ -81,3 +81,11 @@ Memory Usage: 11.8 MB, less than 24.36% of Python online submissions for Number 
 """
 
 
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        count =0
+        while n > 0:
+            count += n % 2 
+            n = n>>1
+        
+        return count  
