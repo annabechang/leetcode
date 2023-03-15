@@ -52,3 +52,30 @@ Details
 Runtime: 168 ms, faster than 26.04% of Python3 online submissions for Missing Number.
 Memory Usage: 15 MB, less than 6.45% of Python3 online submissions for Missing Number.
 """
+"""class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        # tmp_max = max(nums)
+        # while len(nums)>0:
+        #     keep_max = max(nums)
+        #     diff = tmp_max - keep_max
+            
+        #     if diff ==1:
+        #         nums.remove(keep_max)
+        # return keep_max
+        # binary solution below using xor (01 -> 1)
+        # res = len(nums)
+
+        # for i in range(len(nums)):
+        #     print(i,res,nums[i])
+        #     res=res+(i - nums[i])
+        #     print(i,res,nums[i])
+        # return res
+
+        #用等差數列
+        n = len(nums)
+        sum = n*(n+1)/2
+        for i in nums:
+            sum-= i
+        return int(sum)
+
+"""
