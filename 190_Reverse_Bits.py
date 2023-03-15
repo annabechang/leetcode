@@ -93,3 +93,14 @@ Details
 Runtime: 8 ms, faster than 99.80% of Python online submissions for Reverse Bits.
 Memory Usage: 11.8 MB, less than 37.15% of Python online submissions for Reverse Bits.
 """
+class Solution:
+    # @param n, an integer
+    # @return an integer
+    def reverseBits(self, n):
+        res = 0
+        
+        for i in range(32):
+            # res = (res << 1) | (n&1)
+            bit = (n >> i) & 1
+            res = res | (bit << (31-i))
+        return res
