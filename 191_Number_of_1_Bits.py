@@ -73,7 +73,9 @@ class Solution(object):
             res += 1
         return res
 """
-Think of a number in binary n = XXXXXX1000, n - 1 is XXXXXX0111. n & (n - 1) will be XXXXXX0000 which is just cancel the last 1
+Think of a number in binary 
+n = 1001, n - 1 is 1000. n & (n - 1) = 1000. count+=1  will just cancel the last 1.
+n = 1000, n - 1 is 0111. n & (n - 1) = 000 done
 Success
 Details 
 Runtime: 16 ms, faster than 94.11% of Python online submissions for Number of 1 Bits.
