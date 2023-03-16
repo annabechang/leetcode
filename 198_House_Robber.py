@@ -44,3 +44,22 @@ Details
 Runtime: 24 ms, faster than 37.06% of Python online submissions for House Robber.
 Memory Usage: 11.8 MB, less than 46.91% of Python online submissions for House Robber.
 """
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+#         rob1, rob2 = 0,0
+# # rob1, rob2, n, n+1
+#         for n in nums: 
+#             temp = max(n+rob1, rob2)
+#             # decite to rub n or not
+#             rob1 = rob2
+#             # move one hop to n+1
+#             rob2 = temp 
+#         return rob2 
+        dp = [0]*len(nums)
+        dp[0] = nums[0]
+        if len(nums)>1:
+            dp[1] = max(nums[0],nums[1])
+            for i in range(2, len(nums)):
+                dp[i]= max(dp[i-1], nums[i]+dp[i-2])
+        return dp[-1]
